@@ -12,5 +12,7 @@ Below you will find links related to the book structure and code examples. Those
   - [2.6 Vectors](./R%20Basics/2.4-8%20Data%20Types.R#L129)
   - [2.7 Coercion](./R%20Basics/2.4-8%20Data%20Types.R#L180)
   - [2.8 Exercises](./R%20Basics/2.4-8%20Data%20Types.R#L197)
+  - [2.9 Sorting](./R%20Basics/2.9%20Sorting.R)
+  - [2.10 Exercises](./R%20Basics/2.9%20Sorting.R#L35)
 
 
