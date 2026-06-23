@@ -30,7 +30,7 @@ z
 
 class(z)
 
-?Comparison
+? Comparison
 
 # 2.4.5 Factors
 
@@ -39,14 +39,14 @@ levels(murders$region)
 
 region <- murders$region
 value <- murders$total
-region <- reorder(region, value, FUN=sum)
+region <- reorder(region, value, FUN = sum)
 levels(region)
 
 # 2.4.6 Lists
 record = list()
 record$name = "Jonh Doe"
 record$student_id = 1234
-record$grades = c(95,82,91,97,93)
+record$grades = c(95, 82, 91, 97, 93)
 record$final_grade = "A"
 
 class(record)
@@ -63,16 +63,16 @@ record2
 # 2.4.7 Matrices
 mat <- matrix(1:12, 4, 3)
 mat
-mat[2,3]
-mat[2,]
-mat[,3]
-mat[,2:3]
+mat[2, 3]
+mat[2, ]
+mat[, 3]
+mat[, 2:3]
 mat[1:2, 2:3]
 
 as.data.frame(mat)
 
-murders[25,1]
-murders[2:3,]
+murders[25, 1]
+murders[2:3, ]
 
 
 # 2.5 Exercises
@@ -81,19 +81,19 @@ murders[2:3,]
 library(dslabs)
 data(murders)
 
-# Use the function `str` to examine the structure of the murders object. 
+# Use the function `str` to examine the structure of the murders object.
 # Which of the following best describes the variables represented in this data frame?
 
- # a. The 51 states.
- # b. The murder rates for all 50 states and DC.
- # c. The state name, the abbreviation of the state name, the state’s region,
+# a. The 51 states.
+# b. The murder rates for all 50 states and DC.
+# c. The state name, the abbreviation of the state name, the state’s region,
 # and the state’s population and total number of murders for 2010.
- # d. str shows no relevant information.
+# d. str shows no relevant information.
 
 str(murders)
 # Answer: c
 
-# 2. What are the column names used by the data frame for 
+# 2. What are the column names used by the data frame for
 # these five variables?
 names(murders) # [1] "state"  "abb"  "region"   "population" "total"
 
@@ -106,25 +106,25 @@ class(a) # [1] "character"
 # assign them to the object b. Use the identical function to determine
 # if a and b are the same.
 
-b <- murders[,2]
+b <- murders[, 2]
 a == b # Logical (true) vector
 
 # 5. We saw that the region column stores a factor. You can corroborate
 # this by typing:
 class(murders$region) # [1] "factor"
 
-# With one line of code, use the function `levels` and `length` to determine 
+# With one line of code, use the function `levels` and `length` to determine
 # the number of regions defined by this dataset.
 length(levels(murders$region)) # Answer: 4
 
-# 6. The function `table` takes a vector and returns the frequency of 
+# 6. The function `table` takes a vector and returns the frequency of
 # each element. You can quickly see how many states are in each region by
 # applying this function. Use this function in one line of code to create
 # a table of states per region.
 table(murders$region)
 
-#  Northeast         South    North Central          West 
-#         9            17                12            13 
+#  Northeast         South    North Central          West
+#         9            17                12            13
 
 # 2.6 Vectors
 
@@ -216,49 +216,49 @@ city <- c("Beijing",
 names(temp) <- city
 temp
 
-#   Beijing          Lagos          Paris Rio de Janeiro       San Juan 
-#        35             88             42             84             81 
-# Toronto 
-#      30 
+#   Beijing          Lagos          Paris Rio de Janeiro       San Juan
+#        35             88             42             84             81
+# Toronto
+#      30
 
 # 4. Use the `[` and `:` operators to access the temperature of the first
 # three cities on the list.
 temp[1:3]
 
-# Beijing   Lagos   Paris 
-#      35      88      42 
+# Beijing   Lagos   Paris
+#      35      88      42
 
 # 5. Use the`[` operator to access the temperature of Paris and San Juan.
 temp[c("Paris", "San Juan")]
 
-#    Paris San Juan 
-#       42       81 
+#    Paris San Juan
+#       42       81
 
 # 6. Use the `:` operator to create a sequence of numbers 12, 13, 14,..., 73.
 12:73
 
 # 7. Create a vector containing all the positive odd numbers smaller than 100.
-seq(1,100, 2)
+seq(1, 100, 2)
 
-# 8. Create a vector of numbers that starts at 6, does not pass 55, 
-# and adds numbers in increments of 4/7: 6, 6 + 4/7, 6 + 8/7, and so on. 
+# 8. Create a vector of numbers that starts at 6, does not pass 55,
+# and adds numbers in increments of 4/7: 6, 6 + 4/7, 6 + 8/7, and so on.
 # How many numbers does the list have?
 # Hint: use seq and length.
-length(seq(6, 55, 4/7))
+length(seq(6, 55, 4 / 7))
 # Answer: 86
 
 # 9. What is the class of the following object a <- seq(1, 10, 0.5)?
-a <- seq(1,10,0.5)
+a <- seq(1, 10, 0.5)
 class(a)
 # Answer: numeric
 
 # 10. What is the class of the following object a <- seq(1, 10)?
-a <- seq(1,10)
+a <- seq(1, 10)
 class(a)
 # Answer: integer
 
-# 11. The class of class(a<-1) is numeric, not integer. R defaults to 
-# numeric and to force an integer, you need to add the letter L. 
+# 11. The class of class(a<-1) is numeric, not integer. R defaults to
+# numeric and to force an integer, you need to add the letter L.
 # Confirm that the class of 1L is integer.
 class(a <- 1L)
 
@@ -267,4 +267,3 @@ x <- c("1", "3", "5")
 
 # and coerce it to get integers.
 as.integer(x)
-
