@@ -19,3 +19,5 @@ Below you will find links related to the book structure and code examples. Those
   - [2.12 Exercises](./R%20Basics/2.11%20%20Vector%20arithmetics.R#L25)
   - [2.13 Vector arithmetics](./R%20Basics/2.13%20%20Indexing.R)
   - [2.14 Exercises](./R%20Basics/2.13%20%20Indexing.R#L38)
+  - [2.13 Vector arithmetics](./R%20Basics/2.15%20%20Basic%20plots.R)
+  - [2.14 Exercises](./R%20Basics/2.15%20%20Basic%20plots.R#L28)
