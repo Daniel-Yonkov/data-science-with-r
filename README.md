@@ -16,5 +16,7 @@ Below you will find links related to the book structure and code examples. Those
   - [2.10 Exercises](./R%20Basics/2.9%20Sorting.R#L35)
   - [2.11 Vector arithmetics](./R%20Basics/2.11%20%20Vector%20arithmetics.R)
   - [2.12 Exercises](./R%20Basics/2.11%20%20Vector%20arithmetics.R#L25)
+  - [2.13 Vector arithmetics](./R%20Basics/2.13%20%20Indexing.R)
+  - [2.14 Exercises](./R%20Basics/2.13%20%20Indexing.R#L38)
 
 
