@@ -1,6 +1,7 @@
 # This repository contains data science exercises and practices in the R Language based on EDx courses.
 
 ## Structure
+
 Below you will find links related to the book structure and code examples. Those headings that have links are references to code examples and exercises completed in the linked files.
 
 - 2 Data Basics
@@ -18,5 +19,3 @@ Below you will find links related to the book structure and code examples. Those
   - [2.12 Exercises](./R%20Basics/2.11%20%20Vector%20arithmetics.R#L25)
   - [2.13 Vector arithmetics](./R%20Basics/2.13%20%20Indexing.R)
   - [2.14 Exercises](./R%20Basics/2.13%20%20Indexing.R#L38)
-
-

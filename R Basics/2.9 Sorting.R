@@ -66,15 +66,19 @@ states <- murders$state
 states[which.min(pop)]
 # [1] "Wyoming"
 
-# 5. You can create a data frame using the `data.frame` function. 
+# 5. You can create a data frame using the `data.frame` function.
 # Here is a quick example:
 temp <- c(35, 88, 42, 84, 81, 30)
-city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro",
-          "San Juan", "Toronto")
+city <- c("Beijing",
+          "Lagos",
+          "Paris",
+          "Rio de Janeiro",
+          "San Juan",
+          "Toronto")
 city_temps <- data.frame(name = city, temperature = temp)
 
 # Use the `rank` function to determine the population rank of each state
-# from smallest population size to biggest. Save these ranks in an object 
+# from smallest population size to biggest. Save these ranks in an object
 # called ranks, then create a data frame with the state name and its rank.
 # Call the data frame my_df.
 ranks <- rank(pop)
@@ -82,12 +86,12 @@ my_df <- data.frame(name = murders$state, rank = ranks)
 my_df
 
 # 6. Repeat the previous exercise, but this time order my_df so that the
-# states are ordered from least populous to most populous. 
+# states are ordered from least populous to most populous.
 # Hint: create an object ind that stores the indexes needed to order the
 # population values. Then use the bracket operator
 # `[` to re-order each column in the data frame.
 ind <- order(pop)
-my_df[ind,]
+my_df[ind, ]
 
 # 7. The na_example vector represents a series of counts. You can quickly
 # examine the object using:
@@ -104,7 +108,7 @@ ind <- is.na(na_example)
 length(ind)
 # Answer: 1000
 
-# 8. Now compute the average again, but only for the entries that are not 
+# 8. Now compute the average again, but only for the entries that are not
 # NA. Hint: remember the ! operator.
 
 mean(na_example[!ind])
