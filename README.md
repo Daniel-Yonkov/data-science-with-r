@@ -28,5 +28,6 @@ Below you will find links related to the book structure and code examples. Those
   - [3.4 For-loops](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L83)
   - [3.5 Vectorization and functionals](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L105)
   - [3.6 Exercises](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L122)
-
-  
+- 4 The tidyverse  
+  - [4.1  Tidy data](./4.%20The%20tidyverse/4.1%20%20Tidy%20data.R)
+  - [4.2 Exercises](./4.%20The%20tidyverse/4.1%20%20Tidy%20data.R#L10)
