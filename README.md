@@ -21,3 +21,12 @@ Below you will find links related to the book structure and code examples. Those
   - [2.14 Exercises](./R%20Basics/2.13%20%20Indexing.R#L38)
   - [2.13 Vector arithmetics](./R%20Basics/2.15%20%20Basic%20plots.R)
   - [2.14 Exercises](./R%20Basics/2.15%20%20Basic%20plots.R#L28)
+- 3 Programming Fundamentals  
+  - [3.1  Conditional expressions](./3.%20Programming%20Basics/3.%20Programming%20Basics.R)
+  - [3.2 Defining functions](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L53)
+  - [3.3 Namespaces](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L73)
+  - [3.4 For-loops](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L83)
+  - [3.5 Vectorization and functionals](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L105)
+  - [3.6 Exercises](./3.%20Programming%20Basics/3.%20Programming%20Basics.R#L122)
+
+  
