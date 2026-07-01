@@ -33,3 +33,5 @@ Below you will find links related to the book structure and code examples. Those
   - [4.2 Exercises](./4.%20The%20tidyverse/4.1%20%20Tidy%20data.R#L10)
   - [4.3 Manipulating data frames](./4.%20The%20tidyverse/4.3%20%20Manipulating%20data%20frames.R)
   - [4.4 Exercises](././4.%20The%20tidyverse/4.3%20%20Manipulating%20data%20frames.R#L20)
+  - [4.5  The pipe: %>%](./4.%20The%20tidyverse/4.5%20%20The%20pipe:%20%25>%25.R)
+  - [4.6 Exercises](./4.%20The%20tidyverse/4.5%20%20The%20pipe:%20%25>%25.R#L17)
