@@ -44,3 +44,4 @@ Below you will find links related to the book structure and code examples. Those
   - [4.13 The purrr package](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L94)
   - [4.14 Tidyverse conditionals](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L122)
   - [4.15 Exercises](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L152)
+- 5 Importing data: TODO, the subsequent sections will be covered by the online book as it has better structured information and covers newer syntax and standards in the R ecosystem. Link to the new book: https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html 
