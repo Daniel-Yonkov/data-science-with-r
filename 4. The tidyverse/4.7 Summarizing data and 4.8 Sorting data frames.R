@@ -86,3 +86,35 @@ heights |>
 murders |>
   group_by(region) |>
   summarise(median_rate = median(rate))
+
+# -------------------------------------
+
+# 4.8 Sorting data frames
+murders |>
+  arrange(population) |>
+  #  # arrange by default in ascending order / use `desc` for descending order
+  # arrange(desc(population)) |>
+  # or simply use `-` to define the descending order
+  # arrange(-population) |>
+  head()
+
+# 4.8.1 Nested sorting
+
+# If we are ordering by a column with ties, we can use a second column to break the tie.
+# Similarly, a third column can be used to break ties between first and second and so on.
+# Here we order by region, then within region we order by murder rate:
+
+murders |>
+  arrange(region, rate) |>
+  head()
+
+# 4.8.2 The `top` n
+
+# Note that rows are not sorted by rate, only filtered. If we want to sort, we need to use
+# `arrange`. Note that if the third argument is left blank, `top_n`, filters by the 
+# last column.
+murders |> top_n(5)
+
+# equivalent
+murders |> slice_min(rate, n=5) # with sorting in asc order
+murders |> slice_max(rate, n=5) # with sorting in desc order
