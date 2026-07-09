@@ -37,3 +37,4 @@ Below you will find links related to the book structure and code examples. Those
   - [4.6 Exercises](./4.%20The%20tidyverse/4.5%20%20The%20pipe:%20%25>%25.R#L17)
   - [4.7 Summarizing data](./4.%20The%20tidyverse/4.7%20Summarizing%20data%20and%204.8%20Sorting%20data%20frames.R)
   - [4.8 Sorting data frames](./4.%20The%20tidyverse/4.7%20Summarizing%20data%20and%204.8%20Sorting%20data%20frames.R#L92)
+  - [4.9 Exercises](./4.%20The%20tidyverse/4.7%20Summarizing%20data%20and%204.8%20Sorting%20data%20frames.R#L122)
