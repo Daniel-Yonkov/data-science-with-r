@@ -120,3 +120,73 @@ map_df(n, compute_s_n)
 # ----------------------------------
 
 # 4.14 Tidyverse conditionals
+
+# 4.14.1 case_when
+
+x <- c(-2, -1, 0, 1, 2)
+case_when(x < 0 ~ "Negative", x > 0 ~ "Positive", TRUE ~ "Zero")
+
+# we want to compare the murder rates in three groups of states: New England, West Coast,
+# South, and other
+
+murders |>
+  mutate(
+    group = case_when(
+      abb %in% c("ME", "NH", "VT", "MA", "RI", "CT") ~ "New England",
+      abb %in% c("WA", "OR", "CA") ~ "West Coast",
+      region == "South" ~ "South",
+      TRUE ~ "Other"
+    )
+  ) |>
+  group_by(group) |>
+  summarise(rate = sum(total) * 10^5 / sum(population))
+
+# 4.14.2 between
+a <- 0
+b <- 10
+x <- 5
+between(x, a, b)
+
+# ----------------------------------
+
+# 4.15 Exercises
+
+# 1. Load the murders dataset. Which of the following is true?
+# a. murders is in tidy format and is stored in a tibble.
+# b. murders is in tidy format and is stored in a data frame.
+# c. murders is not in tidy format and is stored in a tibble.
+# d. murders is not in tidy format and is stored in a data frame.
+data(murders)
+
+class(murders)
+head(murders)
+# Answer: b
+
+# 2. Use `as_tibble` to convert the murders data table into a tibble and save it in an object
+# called murders_tibble.
+murders_tibble <- as_tibble(murders)
+
+# 3. Use the `group_by` function to convert murders into a tibble that is grouped by region.
+murders |>
+  group_by(region)
+
+# 4. Write tidyverse code that is equivalent to this code:
+# exp(mean(log(murders$population)))
+# Write it using the pipe so that each function is called without arguments. Use the dot
+# operator to access the population. Hint: The code should start with murders %>%.
+
+murders |>
+  pull(population) |>
+  map_dbl(log) |>
+  map_dbl(mean) |>
+  map_dbl(exp)
+
+# 5. Use the `map_df` to create a data frame with three columns named `n`, `s_n`, and `s_n_2`.
+# The first column should contain the numbers 1 through 100. The second and third columns
+# should each contain the sum of 1 through n with n the row number.
+sum_f <- function(n) {
+  x <- 1:n
+  tibble(n = n, sum(x), sum(x)^2)
+}
+
+map_df(1:100, sum_f)
