@@ -45,7 +45,7 @@ Below you will find links related to the book structure and code examples. Those
   - [4.14 Tidyverse conditionals](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L122)
   - [4.15 Exercises](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L152)
 ## Subsequent sections will be done trough the modernized book located [here](https://rafalab.dfci.harvard.edu/dsbook-part-1/)
-- [5 data.table](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/data-table.html): 
+- [5. data.table](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/data-table.html): 
   - [5.1 Refining data tables](./5.%20data.table/5.%20data.table.R#L4)
   - [5.2 Summarizing data](./5.%20data.table/5.%20data.table.R#L66)
   - [5.3 Sorting](./5.%20data.table/5.%20data.table.R#L117)
