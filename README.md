@@ -50,3 +50,4 @@ Below you will find links related to the book structure and code examples. Those
   - [5.2 Summarizing data](./5.%20data.table/5.%20data.table.R#L66)
   - [5.3 Sorting](./5.%20data.table/5.%20data.table.R#L117)
   - [5.4 Exercises](./5.%20data.table/5.%20data.table.R#L151)
+- [6. Importing data - TODO](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html)
