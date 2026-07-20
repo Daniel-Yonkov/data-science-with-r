@@ -52,3 +52,4 @@ Below you will find links related to the book structure and code examples. Those
   - [5.4 Exercises](./5.%20data.table/5.%20data.table.R#L151)
 - [6. Importing data](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html)
   - [6.1 Navigating and managing the filesystem](/6.%20Importing%20data/6.%20Importing%20data.R#L1)
+  - [6.1 File types](/6.%20Importing%20data/6.%20Importing%20data.R#L54)
