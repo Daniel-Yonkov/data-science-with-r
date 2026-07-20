@@ -139,3 +139,45 @@ tmp_filename <- tempfile()
 download.file(url, tmp_filename)
 dat <- read_csv(tmp_filename)
 file.remove(tmp_filename)
+
+# ------------------------------------
+
+#  6.5 Exercises
+# 1. Use the `read_csv` function to read each of the files that the following
+# code saves in the files object:
+path <- system.file("extdata", package = "dslabs")
+files <- list.files(path)
+files
+
+library(purrr)
+files |>
+  map(\(file) read_csv(paste0(path, '/', file)))
+
+# 2. Note that the the olive file, gives us a warning. This is because the first line of the file is missing the header
+# for the first column.
+# Also the first 2 files seem to fail as well.
+
+# removes the first 2 broken files
+files[-1][-1] |>
+  map(\(file) read_csv(paste0(path, '/', file)))
+
+# Read the help file for read_csv to figure out how to read in the file without reading this header.
+# If you skip the header, you should not get this warning. Save the result to an object called dat.
+
+files
+# olives is num 8
+dat <- read_csv(paste0(path, '/', files[8]),
+                skip = 1,
+                col_names = FALSE)
+dat
+
+# 3. A problem with the previous approach is that we don’t know what the columns represent. Type:
+names(dat)
+
+# to see that the names are not informative.
+# Use the readLines function to read in just the first line.
+readLines(paste0(path, '/', files[8]), n = 1)
+
+# 4. Pick a measurement you can take on a regular basis. For example, your daily weight or how long it takes you to run 5 miles.
+# Keep a spreadsheet that includes the date, the hour, the measurement, and any other informative variable you think is worth
+# keeping. Do this for 2 weeks. Then make a plot.
