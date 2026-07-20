@@ -76,4 +76,66 @@ file.copy(file.path(system.file("extdata", package = "dslabs"), fn), fn)
 readLines(fn, n = 1)
 # result:
 # [1] "\"nombre\",\"f.n.\",\"estampa\",\"puntuaci\xf3n\""
-# notice the final element in the result 
+# notice the final element in the result
+
+# ------------------------------------
+
+# 6.3 Parsers
+# more powerful and often faster functions are available in the `readr`,
+# `readxl`, and `data.table` packages
+
+# 6.3.1 Base R
+dat <- read.csv('murders.csv')
+dat
+class(dat)
+
+# a configurable approach
+scan("murders.csv", sep = ',', what = 'c') # typeof character
+
+# 6.3.2 readr
+library(readr)
+
+dat <- read_csv("murders.csv")
+
+# The readr parsers permit us to specify an encoding. It also includes a
+# function that tries to guess the encoding:
+guess_encoding("murders.csv")
+
+guess_encoding("calificaciones.csv")
+
+dat <- read_csv("calificaciones.csv", locale = locale(encoding = "ISO-8859-1"))
+names(dat)
+
+# 6.3.3 readxl
+library(readxl)
+# no examples
+# see: https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html#readxl
+# for more info
+
+# 6.3.4 data.table
+# The data.table package provides the `fread` function, a powerful and fast
+# utility designed for reading large datasets
+
+library(data.table)
+dat <- fread("murders.csv")
+class(dat)
+
+# 6.3.5 Downloading files
+
+url <- paste0(
+  "https://raw.githubusercontent.com/",
+  "rafalab/dslabs/master/inst/extdata/murders.csv"
+)
+
+# loading a remote source
+dat <- read.csv(url)
+
+# copying a remote source
+download.file(url, "murders.csv")
+# The function `download.file` overwrites existing files without warning.
+
+# temp file names and directories using `tempfile` and `tempdir`
+tmp_filename <- tempfile()
+download.file(url, tmp_filename)
+dat <- read_csv(tmp_filename)
+file.remove(tmp_filename)
