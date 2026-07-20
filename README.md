@@ -54,3 +54,4 @@ Below you will find links related to the book structure and code examples. Those
   - [6.1 Navigating and managing the filesystem](/6.%20Importing%20data/6.%20Importing%20data.R#L1)
   - [6.2 File types](/6.%20Importing%20data/6.%20Importing%20data.R#L54)
   - [6.3 Parsers](/6.%20Importing%20data/6.%20Importing%20data.R#L83)
+  - [6.4 Organizing data with spreadsheets](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html#organizing-data-with-spreadsheets)
