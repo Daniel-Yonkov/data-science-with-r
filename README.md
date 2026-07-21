@@ -44,7 +44,7 @@ Below you will find links related to the book structure and code examples. Those
   - [4.13 The purrr package](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L94)
   - [4.14 Tidyverse conditionals](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L122)
   - [4.15 Exercises](./4.%20The%20tidyverse/4.10%20Tibbles,%204.11%20The%20dot%20operator,%204.12%20do,%204.13%20The%20purrr%20package%20and%204.14%20Tidyverse%20conditionals.R#L152)
-## Subsequent sections will be done trough the modernized book located [here](https://rafalab.dfci.harvard.edu/dsbook-part-1/)
+### Subsequent sections will be done trough the modernized book located [here](https://rafalab.dfci.harvard.edu/dsbook-part-1/)
 - [5. data.table](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/data-table.html): 
   - [5.1 Refining data tables](./5.%20data.table/5.%20data.table.R#L4)
   - [5.2 Summarizing data](./5.%20data.table/5.%20data.table.R#L66)
@@ -56,3 +56,8 @@ Below you will find links related to the book structure and code examples. Those
   - [6.3 Parsers](/6.%20Importing%20data/6.%20Importing%20data.R#L83)
   - [6.4 Organizing data with spreadsheets](https://rafalab.dfci.harvard.edu/dsbook-part-1/R/importing-data.html#organizing-data-with-spreadsheets)
   - [6.5 Exercises](/6.%20Importing%20data/6.%20Importing%20data.R#L145)
+### [Data Visualization](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/intro-dataviz.html)
+- [7. Visualizing data distributions](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html)
+  - [7.1 Variable types](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#variable-types)
+  - [7.2 Case study: describing student heights](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#case-study-describing-student-heights)
+  - [7.3 Distributions](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#distributions) - TODO, continue from 7.3.1
