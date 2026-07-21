@@ -62,3 +62,4 @@ Below you will find links related to the book structure and code examples. Those
   - [7.2 Case study: describing student heights](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#case-study-describing-student-heights)
   - [7.3 Distributions](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#distributions)
   - [7.4 Boxplots](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#sec-boxplots)
+  - [7.5 Stratification](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#sec-boxplots)
