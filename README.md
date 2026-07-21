@@ -60,4 +60,5 @@ Below you will find links related to the book structure and code examples. Those
 - [7. Visualizing data distributions](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html)
   - [7.1 Variable types](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#variable-types)
   - [7.2 Case study: describing student heights](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#case-study-describing-student-heights)
-  - [7.3 Distributions](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#distributions) - TODO, continue from 7.3.1
+  - [7.3 Distributions](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#distributions)
+  - [7.4 Boxplots](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#sec-boxplots)
