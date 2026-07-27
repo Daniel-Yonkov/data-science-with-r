@@ -185,3 +185,27 @@ p5 + theme_economist()
 library(ggrepel)
 
 p1 + geom_text_repel(aes(label = abb))
+
+# --------------------------
+
+#  8.13 Putting it all together
+library(ggthemes)
+library(ggrepel)
+
+r <- murders |>
+  summarise(rate = sum(total) * 10^6 / sum(population)) |>
+  pull(rate)
+
+murders |>
+  ggplot(aes(population/10^6, total)) +
+  geom_point(aes(color = region), size = 3) +
+  geom_text_repel(aes(label = abb)) +
+  geom_abline(intercept = log10(r), lty = 2, color = "darkgray") +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(title = "US Gun Murder Rates 2010",
+       x = "Population in millions (log scale)",
+       y = "Total number of murders (log scale)",
+       color = "Region"
+  ) + 
+  theme_economist()
