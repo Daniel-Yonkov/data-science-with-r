@@ -52,3 +52,12 @@ p
 # The `aes` function connects data with what we see on the graph by defining aesthetic mappings.
 
 murders |> ggplot() + geom_point(aes(population/10^6, total))
+
+# --------------------------
+
+# 8.5 Other layers
+# The `geom_label` and `geom_text` functions permit us to add text to the plot with and without a rectangle behind the text.
+murders |>
+  ggplot() +
+  geom_point(aes(population/10^6, total)) +
+  geom_text(aes(population/10^6, total, label = abb))
