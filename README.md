@@ -74,3 +74,4 @@ Below you will find links related to the book structure and code examples. Those
   - [8.6 Global aesthetic mappings](./8.%20ggplot2/8.%20ggplot2.R#L67)
   - [8.7 Non-aesthetic arguments](./8.%20ggplot2/8.%20ggplot2.R#L83)
   - [8.8 Categories as colors](./8.%20ggplot2/8.%20ggplot2.R#L94)
+  - [8.9 Updating ggplot objects](./8.%20ggplot2/8.%20ggplot2.R#L111)
