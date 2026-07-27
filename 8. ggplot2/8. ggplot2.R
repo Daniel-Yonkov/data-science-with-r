@@ -105,3 +105,13 @@ murders |>
   ggplot(aes(population/10^6, total)) +
   geom_point(color = "blue", size = 3)
 # all points are now blue
+
+# --------------------------
+
+# 8.9 Updating ggplot objects
+
+p0 <- murders |> ggplot(aes(population/10^6, total))
+p1 <- p0 + geom_point(aes(color = region), size = 3)
+p1
+p2 <- p1 + geom_text(aes(label = abb),  nudge_x = 0.1)
+p2
