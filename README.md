@@ -72,3 +72,4 @@ Below you will find links related to the book structure and code examples. Those
   - [8.4 Aesthetic mappings](./8.%20ggplot2/8.%20ggplot2.R#L49)
   - [8.5 Other layers](./8.%20ggplot2/8.%20ggplot2.R#L58)
   - [8.6 Global aesthetic mappings](./8.%20ggplot2/8.%20ggplot2.R#L67)
+  - [8.7 Non-aesthetic arguments](./8.%20ggplot2/8.%20ggplot2.R#L83)
