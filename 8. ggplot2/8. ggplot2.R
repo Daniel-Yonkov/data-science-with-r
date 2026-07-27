@@ -161,3 +161,27 @@ r <- murders |>
 
 p5 <- p4 + geom_abline(intercept = log10(r), lty = 2, color = "darkgrey")
 p5
+
+# --------------------------
+
+# 8.12 Add-on packages
+
+# The power of ggplot2 is augmented further due to the availability of add-on 
+# packages
+# The style of a ggplot2 graph can be changed using the theme functions
+# we use a function in the dslabs package that automatically sets a default theme:
+ds_theme_set()
+
+# install.packages('ggthemes', dependencies = TRUE)
+# install.packages("ggrepel")
+library(ggthemes)
+
+p5 + theme_economist()
+
+# to better position of the labels to avoid crowding the add-on package `ggrepel`
+# includes a geometry that adds labels while ensuring that they don’t fall on 
+# top of each other. We simply change `geom_text` to `geom_text_repel`
+# install.packages("ggrepel")
+library(ggrepel)
+
+p1 + geom_text_repel(aes(label = abb))
