@@ -65,4 +65,7 @@ Below you will find links related to the book structure and code examples. Those
   - [7.5 Stratification](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#sec-boxplots)
   - [7.6 Case study continued](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/distributions.html#sec-student-height-cont)
   - [7.7 Exercises](./7.%20Visualizing%20data%20distributions/7.7%20Exercises.R#L1)
-- [8  ggplot2](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html) TODO
+- [8. ggplot2](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html)
+  - [8.1 The components of a graph](./8.%20ggplot2/8.%20ggplot2.R#L4)
+  - [8.2 Initializing an object with data](./8.%20ggplot2/8.%20ggplot2.R#L23)
+  - [8.3 Adding a geometry](./8.%20ggplot2/8.%20ggplot2.R#L40)
