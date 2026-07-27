@@ -77,3 +77,14 @@ murders |>
   ggplot(aes(population/10^6, total)) +
   geom_point() +
   geom_text(aes(x = 10, y = 800, label = "Hello World"))
+
+# --------------------------
+
+# 8.7 Non-aesthetic arguments
+# Each geometry function has arguments other than `aes` and `data`
+# to avoid putting the text on top of the point, we can use the `nudge_x` argument in `geom_text`
+
+murders |>
+  ggplot(aes(population/10^6, total)) +
+  geom_point() +
+  geom_text(aes(label = abb), nudge_x = 1.5)
