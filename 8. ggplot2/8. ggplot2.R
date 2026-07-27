@@ -88,3 +88,20 @@ murders |>
   ggplot(aes(population/10^6, total)) +
   geom_point() +
   geom_text(aes(label = abb), nudge_x = 1.5)
+
+# --------------------------
+
+# 8.8 Categories as colors
+
+murders |>
+  ggplot(aes(population/10^6, total)) +
+  geom_point(aes(color = region), size = 3)
+
+# Note that `color` is also a non-aesthetic argument in several ggplot2 functions,
+# including `geom_point`. This argument is not used to map colors to categories,
+# but to change the color of all the points
+
+murders |>
+  ggplot(aes(population/10^6, total)) +
+  geom_point(color = "blue", size = 3)
+# all points are now blue
