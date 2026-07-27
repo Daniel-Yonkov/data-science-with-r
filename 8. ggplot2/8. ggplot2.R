@@ -123,3 +123,41 @@ p2
 p2 + scale_x_continuous(trans = "log10") + scale_y_continuous(trans = "log10")
 # equivalence
 p2 + scale_x_log10() + scale_y_log10()
+
+p3 <- p2 + scale_x_log10() + scale_y_log10()
+
+# --------------------------
+
+# 8.11 Annotations
+# Examples of annotation functions are `labs`, `annotate`, and `geom_abline`.
+# The labs function permits adding a title, subtitle, caption, and other labels.
+# Note these can also be defined individually using the functions such as `xlab`,
+# `ylab` and `ggtitle`.
+
+p4 <- p3 + labs(title = "US Gun Murder Rates 2010",
+                x = "Population in millions (log scale)",
+                y = "Total number of murders (log scale)",
+                color = "Region"
+                )
+p4
+
+# Our desired final plot includes a line that represents the average murder rate
+# for the entire country
+# Once we determine the per million rate to be `r`, the desired line is defined
+# by the formula: `y = r*x`, with `y` and `x` our axes: total murders and 
+# population in millions, respectively. In the log-scale this line turns into: 
+# `log(y) = log(r) + log(x)`, a line with slope 1 and intercept log(r). 
+# We can compute r using:
+
+r <- murders |>
+  summarise(rate = sum(total) * 10^6 / sum(population)) |>
+  pull(rate)
+
+# To add a line we use the `geom_abline` function. The `ab` in the name reminds
+# us we are supplying the intercept (a) and slope (b). The default line has slope
+# 1 and intercept 0 so we only have to define the intercept. Note that the final
+# plot has a dashed line type and is grey and these can be changed through the 
+# `lty` (line type) and color non aesthetic arguments. We add the layer like this:
+
+p5 <- p4 + geom_abline(intercept = log10(r), lty = 2, color = "darkgrey")
+p5
