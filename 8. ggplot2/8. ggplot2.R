@@ -41,7 +41,7 @@ p
 # use ggplot2-cheatsheets.png for reference
 # geometry function names follow the pattern: `geom_X` where X is the name of the geometry.
 # for scatterplot, we need `geom_point`
-?geom_point
+? geom_point
 # at the Aesthetics section we see what are the required parameters in bold
 
 # --------------------------
@@ -51,7 +51,7 @@ p
 # size, or color.
 # The `aes` function connects data with what we see on the graph by defining aesthetic mappings.
 
-murders |> ggplot() + geom_point(aes(population/10^6, total))
+murders |> ggplot() + geom_point(aes(population / 10^6, total))
 
 # --------------------------
 
@@ -59,8 +59,8 @@ murders |> ggplot() + geom_point(aes(population/10^6, total))
 # The `geom_label` and `geom_text` functions permit us to add text to the plot with and without a rectangle behind the text.
 murders |>
   ggplot() +
-  geom_point(aes(population/10^6, total)) +
-  geom_text(aes(population/10^6, total, label = abb))
+  geom_point(aes(population / 10^6, total)) +
+  geom_text(aes(population / 10^6, total, label = abb))
 
 # --------------------------
 
@@ -68,13 +68,13 @@ murders |>
 # We can avoid aesthetic duplication by using a global aesthetic mapping.
 
 murders |>
-  ggplot(aes(population/10^6, total)) +
+  ggplot(aes(population / 10^6, total)) +
   geom_point() +
   geom_text(aes(label = abb))
 
-# If necessary, we can override the global mapping by defining a new mapping within each layer. 
+# If necessary, we can override the global mapping by defining a new mapping within each layer.
 murders |>
-  ggplot(aes(population/10^6, total)) +
+  ggplot(aes(population / 10^6, total)) +
   geom_point() +
   geom_text(aes(x = 10, y = 800, label = "Hello World"))
 
@@ -85,7 +85,7 @@ murders |>
 # to avoid putting the text on top of the point, we can use the `nudge_x` argument in `geom_text`
 
 murders |>
-  ggplot(aes(population/10^6, total)) +
+  ggplot(aes(population / 10^6, total)) +
   geom_point() +
   geom_text(aes(label = abb), nudge_x = 1.5)
 
@@ -94,7 +94,7 @@ murders |>
 # 8.8 Categories as colors
 
 murders |>
-  ggplot(aes(population/10^6, total)) +
+  ggplot(aes(population / 10^6, total)) +
   geom_point(aes(color = region), size = 3)
 
 # Note that `color` is also a non-aesthetic argument in several ggplot2 functions,
@@ -102,7 +102,7 @@ murders |>
 # but to change the color of all the points
 
 murders |>
-  ggplot(aes(population/10^6, total)) +
+  ggplot(aes(population / 10^6, total)) +
   geom_point(color = "blue", size = 3)
 # all points are now blue
 
@@ -110,10 +110,10 @@ murders |>
 
 # 8.9 Updating ggplot objects
 
-p0 <- murders |> ggplot(aes(population/10^6, total))
+p0 <- murders |> ggplot(aes(population / 10^6, total))
 p1 <- p0 + geom_point(aes(color = region), size = 3)
 p1
-p2 <- p1 + geom_text(aes(label = abb),  nudge_x = 0.1)
+p2 <- p1 + geom_text(aes(label = abb), nudge_x = 0.1)
 p2
 
 # --------------------------
@@ -134,19 +134,20 @@ p3 <- p2 + scale_x_log10() + scale_y_log10()
 # Note these can also be defined individually using the functions such as `xlab`,
 # `ylab` and `ggtitle`.
 
-p4 <- p3 + labs(title = "US Gun Murder Rates 2010",
-                x = "Population in millions (log scale)",
-                y = "Total number of murders (log scale)",
-                color = "Region"
-                )
+p4 <- p3 + labs(
+  title = "US Gun Murder Rates 2010",
+  x = "Population in millions (log scale)",
+  y = "Total number of murders (log scale)",
+  color = "Region"
+)
 p4
 
 # Our desired final plot includes a line that represents the average murder rate
 # for the entire country
 # Once we determine the per million rate to be `r`, the desired line is defined
-# by the formula: `y = r*x`, with `y` and `x` our axes: total murders and 
-# population in millions, respectively. In the log-scale this line turns into: 
-# `log(y) = log(r) + log(x)`, a line with slope 1 and intercept log(r). 
+# by the formula: `y = r*x`, with `y` and `x` our axes: total murders and
+# population in millions, respectively. In the log-scale this line turns into:
+# `log(y) = log(r) + log(x)`, a line with slope 1 and intercept log(r).
 # We can compute r using:
 
 r <- murders |>
@@ -156,17 +157,19 @@ r <- murders |>
 # To add a line we use the `geom_abline` function. The `ab` in the name reminds
 # us we are supplying the intercept (a) and slope (b). The default line has slope
 # 1 and intercept 0 so we only have to define the intercept. Note that the final
-# plot has a dashed line type and is grey and these can be changed through the 
+# plot has a dashed line type and is grey and these can be changed through the
 # `lty` (line type) and color non aesthetic arguments. We add the layer like this:
 
-p5 <- p4 + geom_abline(intercept = log10(r), lty = 2, color = "darkgrey")
+p5 <- p4 + geom_abline(intercept = log10(r),
+                       lty = 2,
+                       color = "darkgrey")
 p5
 
 # --------------------------
 
 # 8.12 Add-on packages
 
-# The power of ggplot2 is augmented further due to the availability of add-on 
+# The power of ggplot2 is augmented further due to the availability of add-on
 # packages
 # The style of a ggplot2 graph can be changed using the theme functions
 # we use a function in the dslabs package that automatically sets a default theme:
@@ -179,7 +182,7 @@ library(ggthemes)
 p5 + theme_economist()
 
 # to better position of the labels to avoid crowding the add-on package `ggrepel`
-# includes a geometry that adds labels while ensuring that they don’t fall on 
+# includes a geometry that adds labels while ensuring that they don’t fall on
 # top of each other. We simply change `geom_text` to `geom_text_repel`
 # install.packages("ggrepel")
 library(ggrepel)
@@ -197,15 +200,18 @@ r <- murders |>
   pull(rate)
 
 murders |>
-  ggplot(aes(population/10^6, total)) +
+  ggplot(aes(population / 10^6, total)) +
   geom_point(aes(color = region), size = 3) +
   geom_text_repel(aes(label = abb)) +
-  geom_abline(intercept = log10(r), lty = 2, color = "darkgray") +
+  geom_abline(intercept = log10(r),
+              lty = 2,
+              color = "darkgray") +
   scale_x_log10() +
   scale_y_log10() +
-  labs(title = "US Gun Murder Rates 2010",
-       x = "Population in millions (log scale)",
-       y = "Total number of murders (log scale)",
-       color = "Region"
-  ) + 
+  labs(
+    title = "US Gun Murder Rates 2010",
+    x = "Population in millions (log scale)",
+    y = "Total number of murders (log scale)",
+    color = "Region"
+  ) +
   theme_economist()
