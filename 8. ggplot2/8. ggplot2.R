@@ -115,3 +115,11 @@ p1 <- p0 + geom_point(aes(color = region), size = 3)
 p1
 p2 <- p1 + geom_text(aes(label = abb),  nudge_x = 0.1)
 p2
+
+# --------------------------
+
+# 8.10 Scales
+
+p2 + scale_x_continuous(trans = "log10") + scale_y_continuous(trans = "log10")
+# equivalence
+p2 + scale_x_log10() + scale_y_log10()
