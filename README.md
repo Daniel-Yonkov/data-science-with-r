@@ -78,3 +78,4 @@ Below you will find links related to the book structure and code examples. Those
   - [8.10 Scales](./8.%20ggplot2/8.%20ggplot2.R#L121)
   - [8.11 Annotations](./8.%20ggplot2/8.%20ggplot2.R#L131)
   - [8.12 Add-on packages](./8.%20ggplot2/8.%20ggplot2.R#L167)
+  - [8.13 Putting it all together](./8.%20ggplot2/8.%20ggplot2.R#L191)
