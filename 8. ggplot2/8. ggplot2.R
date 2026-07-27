@@ -61,3 +61,19 @@ murders |>
   ggplot() +
   geom_point(aes(population/10^6, total)) +
   geom_text(aes(population/10^6, total, label = abb))
+
+# --------------------------
+
+# 8.6 Global aesthetic mappings
+# We can avoid aesthetic duplication by using a global aesthetic mapping.
+
+murders |>
+  ggplot(aes(population/10^6, total)) +
+  geom_point() +
+  geom_text(aes(label = abb))
+
+# If necessary, we can override the global mapping by defining a new mapping within each layer. 
+murders |>
+  ggplot(aes(population/10^6, total)) +
+  geom_point() +
+  geom_text(aes(x = 10, y = 800, label = "Hello World"))
