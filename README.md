@@ -79,4 +79,9 @@ Below you will find links related to the book structure and code examples. Those
   - [8.11 Annotations](./8.%20ggplot2/8.%20ggplot2.R#L131)
   - [8.12 Add-on packages](./8.%20ggplot2/8.%20ggplot2.R#L167)
   - [8.13 Putting it all together](./8.%20ggplot2/8.%20ggplot2.R#L191)
-  - [8.14 Geometries](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html#sec-other-geometries) TODO
+  - [8.14 Geometries](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/ggplot2.html#sec-other-geometries)
+    - [8.14.1 Barplots](./8.%20ggplot2/8.%20ggplot2.R#L223)
+    - [8.14.2 Histograms](./8.%20ggplot2/8.%20ggplot2.R#L239)
+    - [8.14.3 Density plots](./8.%20ggplot2/8.%20ggplot2.R#L247)
+    - [8.14.4 Boxplots](./8.%20ggplot2/8.%20ggplot2.R#L260)
+    - [8.14.5 Images](./8.%20ggplot2/8.%20ggplot2.R#L264)
