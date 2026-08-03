@@ -215,3 +215,62 @@ murders |>
     color = "Region"
   ) +
   theme_economist()
+
+# --------------------------
+
+# 8.14 Geometries
+
+# 8.14.1 Barplots
+
+#  plot for the regions of the US
+murders |>
+  ggplot(aes(region)) +
+  geom_bar()
+
+#  plot for the regions of the US as proportions and using a different geometric
+tab <- murders |>
+  count(region) |>
+  mutate(proportion = n / sum(n))
+
+tab |>
+  ggplot(aes(region, proportion)) +
+  geom_col()
+
+# 8.14.2 Histograms
+data("heights")
+heights |> filter(sex == "Female") |>
+  ggplot(aes(height)) +
+  geom_histogram(binwidth = 1,
+                 fill = "blue",
+                 col = "black")
+
+# 8.14.3 Density plots
+heights |>
+  filter(sex == "Female") |>
+  ggplot(aes(height)) +
+  geom_density(fill = "blue")
+
+# To change the smoothness of the density, we use the `adjust` argument to multiply
+# the default value by that `adjust`
+heights |>
+  filter(sex == "Female") |>
+  ggplot(aes(height)) +
+  geom_density(fill = "blue", adjust = 2)
+
+# 8.14.4 Boxplots
+heights |> ggplot(aes(sex, height)) +
+  geom_boxplot()
+
+# 8.14.5 Images
+x <- expand.grid(x = 1:12, y = 1:10) |> mutate(z = 1:120)
+
+# above code is the tidy version of:
+# matrix(1:120, 12, 10)
+
+x |> ggplot(aes(x, y, fill = z)) + geom_raster()
+x |> ggplot(aes(x, y, fill = z)) + geom_tile()
+
+# to change the color scale
+x |> ggplot(aes(x, y, fill = z)) +
+  geom_raster() +
+  scale_fill_gradientn(colors = terrain.colors(10, 1))
