@@ -179,7 +179,7 @@ ds_theme_set()
 # install.packages("ggrepel")
 library(ggthemes)
 
-p5 + theme_economist()
+p6 <- p5 + theme_economist()
 
 # to better position of the labels to avoid crowding the add-on package `ggrepel`
 # includes a geometry that adds labels while ensuring that they don’t fall on
@@ -274,3 +274,10 @@ x |> ggplot(aes(x, y, fill = z)) + geom_tile()
 x |> ggplot(aes(x, y, fill = z)) +
   geom_raster() +
   scale_fill_gradientn(colors = terrain.colors(10, 1))
+
+# --------------------------
+
+# 8.15 Grids of plots
+# install.packages("gridExtra")
+library(gridExtra)
+grid.arrange(p5, p6, ncol = 2)
