@@ -87,3 +87,4 @@ Below you will find links related to the book structure and code examples. Those
     - [8.14.5 Images](./8.%20ggplot2/8.%20ggplot2.R#L264)
   - [8.15 Grids of plots](./8.%20ggplot2/8.%20ggplot2.R#L280)
   - [8.16 Exercises](./8.%20ggplot2/8.16%20Exercises.R) 
+  - [9. Data visualization principles](https://rafalab.dfci.harvard.edu/dsbook-part-1/dataviz/dataviz-principles.html) TODO
